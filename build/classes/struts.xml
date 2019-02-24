@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 指定Struts2配置文件的DTD信息 -->
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+<!-- Struts2配置文件的根元素 -->
+<struts>
+	<!-- 配置了系列常量 动态方法调用关闭 开发者模式 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="false"></constant>
+	<constant name="struts.devMode" value="true"/>
+	<package name="default" extends="struts-default" namespace="/">
+
+		<action name="loginUser" 
+			class="loginUserAction">
+			<result>/index.jsp</result>
+		</action>
+		
+	</package>
+</struts>

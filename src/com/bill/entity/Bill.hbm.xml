@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-12-2 11:46:47 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="com.bill.entity.Bill" table="bill">
+		<id name="b_Id" type="java.lang.String">
+			<column name="b_Id" />
+			<generator class="uuid.hex" />
+		</id>
+		<property name="b_time" type="time">
+			<column name="b_time" />
+		</property>
+
+		<property name="b_describe" type="java.lang.String">
+			<column name="b_describe" />
+		</property>
+
+		<property name="b_money" type="java.lang.Double">
+			<column name="b_money" />
+		</property>
+
+		<property name="b_balance" type="java.lang.Double">
+			<column name="b_balance" />
+		</property>
+		
+		 <many-to-one name="b_account" class="com.bill.entity.Account" column="account_id"></many-to-one>
+
+	</class>
+</hibernate-mapping>
